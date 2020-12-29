@@ -11,14 +11,15 @@ struct ContentView: View {
     
     var body: some View {
         VStack{
-        Text("Movies")
-            .font(.largeTitle)
-        List{
-            MovieRow(movieName: "Toy_Story", movieCharacters: ["Woody", "Buzz"])
-            MovieRow(movieName: "Cars", movieCharacters: ["Lightning McQueen", "Mater", "Doc Hudson"])
-            MovieRow(movieName: "The_Karate_Kid", movieCharacters: ["Daniel LaRusso", "Mr. Miyagi", "Johnny Lawrence"])
-
-        }
+            Text("Movies")
+                .font(.largeTitle)
+            List{
+                MovieRow(movieName: "Toy_Story", movieCharacters: ["Woody", "Buzz"])
+                MovieRow(movieName: "Cars", movieCharacters: ["Lightning McQueen", "Mater", "Doc Hudson"])
+                MovieRow(movieName: "The_Karate_Kid", movieCharacters: ["Daniel LaRusso", "Mr. Miyagi", "Johnny Lawrence"])
+                
+            }
+            
         }
     }
 }
