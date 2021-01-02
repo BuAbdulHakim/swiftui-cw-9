@@ -14,17 +14,17 @@ struct ContentView: View {
             
             List{
                 NavigationLink(
-                    destination: Image("Toy_Story").resizable().scaledToFit(),
+                    destination: MovieDetailView(movieName: "Toy_Story", movieCharacters: ["Woody", "Buzz"]),
                     label: {
                         MovieRow(movieName: "Toy_Story", movieCharacters: ["Woody", "Buzz"])
                     })
                 NavigationLink(
-                    destination: Image("Cars").resizable().scaledToFit(),
+                    destination: MovieDetailView(movieName: "Cars", movieCharacters: ["Lightning McQueen", "Mater", "Doc Hudson"]),
                     label: {
                         MovieRow(movieName: "Cars", movieCharacters: ["Lightning McQueen", "Mater", "Doc Hudson"])
                     })
                 NavigationLink(
-                    destination: Image("The_Karate_Kid").resizable().scaledToFit(),
+                    destination: MovieDetailView(movieName: "The_Karate_Kid", movieCharacters: ["Daniel LaRusso", "Mr. Miyagi", "Johnny Lawrence"]),
                     label: {
                         MovieRow(movieName: "The_Karate_Kid", movieCharacters: ["Daniel LaRusso", "Mr. Miyagi", "Johnny Lawrence"])
                     })
