@@ -12,6 +12,7 @@
 		52F4E855259BA82E00278BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F4E854259BA82E00278BFF /* Assets.xcassets */; };
 		52F4E858259BA82E00278BFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F4E857259BA82E00278BFF /* Preview Assets.xcassets */; };
 		52FDC5F725A0DFEF006B647B /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDC5F625A0DFEF006B647B /* MovieDetailView.swift */; };
+		52FDC5FF25A0EF2B006B647B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDC5FE25A0EF2B006B647B /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		52F4E857259BA82E00278BFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52F4E859259BA82E00278BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FDC5F625A0DFEF006B647B /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		52FDC5FE25A0EF2B006B647B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		52F4E84F259BA82B00278BFF /* SwiftUI-CW_9 */ = {
 			isa = PBXGroup;
 			children = (
+				52FDC5F925A0EE8E006B647B /* Models */,
 				52F4E850259BA82B00278BFF /* SwiftUI_CW_9App.swift */,
 				52F4E852259BA82B00278BFF /* ContentView.swift */,
 				52F4E854259BA82E00278BFF /* Assets.xcassets */,
@@ -70,6 +73,14 @@
 				52F4E857259BA82E00278BFF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52FDC5F925A0EE8E006B647B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52FDC5FE25A0EF2B006B647B /* Movie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 			files = (
 				52FDC5F725A0DFEF006B647B /* MovieDetailView.swift in Sources */,
 				52F4E853259BA82B00278BFF /* ContentView.swift in Sources */,
+				52FDC5FF25A0EF2B006B647B /* Movie.swift in Sources */,
 				52F4E851259BA82B00278BFF /* SwiftUI_CW_9App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

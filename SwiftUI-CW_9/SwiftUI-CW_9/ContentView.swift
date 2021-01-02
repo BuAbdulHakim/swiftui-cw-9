@@ -12,21 +12,11 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             
-            List{
+            List(movies){ movie in
                 NavigationLink(
-                    destination: MovieDetailView(movieName: "Toy_Story", movieCharacters: ["Woody", "Buzz"]),
+                    destination: MovieDetailView(movie: movie),
                     label: {
-                        MovieRow(movieName: "Toy_Story", movieCharacters: ["Woody", "Buzz"])
-                    })
-                NavigationLink(
-                    destination: MovieDetailView(movieName: "Cars", movieCharacters: ["Lightning McQueen", "Mater", "Doc Hudson"]),
-                    label: {
-                        MovieRow(movieName: "Cars", movieCharacters: ["Lightning McQueen", "Mater", "Doc Hudson"])
-                    })
-                NavigationLink(
-                    destination: MovieDetailView(movieName: "The_Karate_Kid", movieCharacters: ["Daniel LaRusso", "Mr. Miyagi", "Johnny Lawrence"]),
-                    label: {
-                        MovieRow(movieName: "The_Karate_Kid", movieCharacters: ["Daniel LaRusso", "Mr. Miyagi", "Johnny Lawrence"])
+                        MovieRow(movie: movie)
                     })
                 
             }.navigationBarTitle("Movies")
@@ -42,21 +32,20 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct MovieRow: View {
-    let movieName:String
-    let movieCharacters:[String]
+    let movie: Movie
     
     var body: some View {
         HStack(alignment: .center){
-            Image(movieName)
+            Image(movie.title)
                 .resizable()
                 .scaledToFit()
                 .frame(height: 100)
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                .clipShape(Circle())
             
             VStack(alignment: .leading){
-                Text(movieName)
+                Text(movie.title)
                     .font(.largeTitle)
-                Text(movieCharacters.joined(separator: ", "))
+                Text(movie.characters.joined(separator: ", "))
             }
         }.padding(.vertical)
     }
