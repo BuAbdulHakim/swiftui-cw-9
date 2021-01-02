@@ -10,15 +10,26 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        VStack{
-            Text("Movies")
-                .font(.largeTitle)
+        NavigationView{
+            
             List{
-                MovieRow(movieName: "Toy_Story", movieCharacters: ["Woody", "Buzz"])
-                MovieRow(movieName: "Cars", movieCharacters: ["Lightning McQueen", "Mater", "Doc Hudson"])
-                MovieRow(movieName: "The_Karate_Kid", movieCharacters: ["Daniel LaRusso", "Mr. Miyagi", "Johnny Lawrence"])
+                NavigationLink(
+                    destination: Image("Toy_Story").resizable().scaledToFit(),
+                    label: {
+                        MovieRow(movieName: "Toy_Story", movieCharacters: ["Woody", "Buzz"])
+                    })
+                NavigationLink(
+                    destination: Image("Cars").resizable().scaledToFit(),
+                    label: {
+                        MovieRow(movieName: "Cars", movieCharacters: ["Lightning McQueen", "Mater", "Doc Hudson"])
+                    })
+                NavigationLink(
+                    destination: Image("The_Karate_Kid").resizable().scaledToFit(),
+                    label: {
+                        MovieRow(movieName: "The_Karate_Kid", movieCharacters: ["Daniel LaRusso", "Mr. Miyagi", "Johnny Lawrence"])
+                    })
                 
-            }
+            }.navigationBarTitle("Movies")
             
         }
     }
